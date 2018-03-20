@@ -1,0 +1,1 @@
+export { default as globbal } from "./global";
