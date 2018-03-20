@@ -2,6 +2,7 @@
   "name": "milligram-in-jss",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "types/*"
   ]
 }
