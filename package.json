@@ -6,7 +6,9 @@
     "types/*"
   ],
   "scripts": {
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "start": "cd packages/demo && npm start"
   },
   "dependencies": {
     "lerna": "^2.9.0"
