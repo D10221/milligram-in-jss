@@ -1,0 +1,54 @@
+{
+  "name": "@d10221/icon",
+  "version": "0.1.0-1",
+  "private": true,
+  "description": "Icon",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --env=jsdom",
+    "build": "tsc -p .",
+    "clean": "rimraf ./lib",
+    "rebuild": "npm run clean && npm run build",
+    "umd": "node_modules/.bin/webpack --config ./config/webpack.config.js --mode production"
+  },
+  "keywords": [
+    "css",
+    "jss",
+    "css-in-js",
+    "milligram",
+    "typescript"
+  ],
+  "author": "@d10221",
+  "license": "MIT",
+  "dependencies": {
+    
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "classnames": "2.2.5"
+  },
+  "devDependencies": {
+    "@types/jest": "22.2.0",
+    "jest": "22.4.2",
+    "ts-jest": "22.4.2",
+    "ts-loader": "4.1.0",
+    "typescript": "2.7.2",
+    "webpack": "4.1.1",
+    "webpack-cli": "2.0.12"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__test__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

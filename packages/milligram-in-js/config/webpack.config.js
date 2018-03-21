@@ -11,7 +11,7 @@ module.exports = {
     devtool: (!production ? "source-map" : undefined), 
     mode,
     entry: {
-        [`${pkg.name}-in-js` + (production ? ".min" : "")]: path.resolve(__dirname, '../src/index.ts'),
+        [`${pkg.name}` + (production ? ".min" : "")]: path.resolve(__dirname, '../src/index.ts'),
     },
     output: {
         path: path.resolve(__dirname, '../lib/umd'),

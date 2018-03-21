@@ -9,7 +9,7 @@ import styles from "./styles";
 import * as classnames from "classnames";
 /** typeface */
 import * as webFont from "webfontloader";
-import Icon from "./icon";
+import { Icon } from "@d10221/icon";
 
 webFont.load({
   google: {
