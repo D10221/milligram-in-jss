@@ -1,5 +1,5 @@
 /**
- * source: https://github.com/mui-org/material-ui/blob/855367ef298104312a84b9c21f71f79bcebb862a/src/utils/ClickAwayListener.js
+ * source: https://github.com/mui-org/material-ui/blob/v1-beta/src/utils/ClickAwayListener.js
  */
 
 import * as React from "react";
