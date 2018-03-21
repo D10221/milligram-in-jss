@@ -35,7 +35,7 @@ const App: ComponentType<{}> = withStyles(styles)(
             <button
               className={classnames("button button-clear", classes.iconButton)}
             >
-              <Icon>more_vert</Icon>
+              <Icon>menu</Icon>
             </button>
           </div>
           <header className={classes.header}>
