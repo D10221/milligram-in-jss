@@ -4,5 +4,11 @@
   "workspaces": [
     "packages/*",
     "types/*"
-  ]
+  ],
+  "scripts": {
+    "build": "lerna run build"
+  },
+  "dependencies": {
+    "lerna": "^2.9.0"
+  }
 }
