@@ -1,0 +1,12 @@
+{
+  "name": "@d10221/click-away-listener",
+  "version": "1.0.0",
+  "description": "extracted from Material-ui/utils/ClickAwayListener",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
