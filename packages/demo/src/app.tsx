@@ -22,7 +22,7 @@ jss.setup(preset());
 const logo = require("./logo.svg");
 //
 import { Manager, Target, Popper, Arrow } from "react-popper";
-import ClickAwayListener from "./click-away-listener";
+import { ClickAwayListener } from "@d10221/click-away-listener";
 
 const PopperExample = class extends Component<{
   content: React.ReactElement<{}>;
