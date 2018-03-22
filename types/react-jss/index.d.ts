@@ -1,3 +1,6 @@
+/**
+ *
+ */
 declare module "react-jss" {
   import {
     ComponentClass,
@@ -5,6 +8,8 @@ declare module "react-jss" {
     CSSProperties,
     Component,
   } from "react";
+  import { ThemeProvider, withTheme, createTheming } from "theming";
+  import jss, { SheetsRegistry } from "jss";
 
   export type Styles = { [key: string]: CSSProperties };
   export type Theme = Styles & {};
@@ -12,17 +17,16 @@ declare module "react-jss" {
   export type ReactType<T = {}> = ComponentClass<T> | StatelessComponent<T>;
   export type Classes = { [key: string]: string };
   export type StyledProps = { classes?: Classes };
-
+  
+  /** */
   const injectSheet: (
     styles: Styles | StylesCallback,
   ) => <T extends StyledProps = StyledProps>(
     C: ReactType<T>,
   ) => ComponentClass<T>;
-
-  export default injectSheet;
-
-  import { ThemeProvider, withTheme, createTheming } from "theming";
-  import jss, { SheetsRegistry } from "jss";
+  /**
+   *
+   */
   class JssProvider extends Component<{
     jss?: {
       options?: {
@@ -35,7 +39,9 @@ declare module "react-jss" {
     generateClassName?: Function;
     classNamePrefix?: string;
   }> {}
+  /** */
   const createGenerateClassName: Function;
+  /** */
   export {
     ThemeProvider,
     withTheme,
@@ -45,4 +51,6 @@ declare module "react-jss" {
     SheetsRegistry,
     createGenerateClassName,
   };
+  /** */
+  export default injectSheet;
 }
