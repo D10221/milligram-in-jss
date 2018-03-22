@@ -1,5 +1,6 @@
 /**
- * source: C:\dev\experiments\@me\milligram-in-jss\packages\click-away-listener
+ * source: https://github.com/mui-org/material-ui/blob/v1-beta/src/utils/ClickAwayListener.spec.js
+ * reduced and tweeked 
  */
 import * as React from "react";
 import * as ReactDOM from "react-dom";
