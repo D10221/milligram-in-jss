@@ -1,3 +1,6 @@
+/**
+ * source: C:\dev\experiments\@me\milligram-in-jss\packages\click-away-listener
+ */
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { findDOMNode } from "react-dom";
@@ -10,12 +13,11 @@ describe("<ClickAwayListener />", () => {
     let el: Element;
     const body = document.createElement("div");
     ReactDOM.render(
-      <ClickAwayListener 
-        ref={x=> el = findDOMNode(x)}
-        onClickAway={() => {}}>{children}</ClickAwayListener>,
+      <ClickAwayListener
+        ref={x => el = findDOMNode(x)}
+        onClickAway={() => { }}>{children}</ClickAwayListener>,
       body,
-    );    
-    console.log(el);
+    );
     expect(el.id).toBe("hello");
   });
   /** */
@@ -54,17 +56,19 @@ describe("<ClickAwayListener />", () => {
       let el;
       ReactDOM.render(
         <ClickAwayListener
-          ref={x => {
-            el = x;
-          }}
           onClickAway={handleClickAway}
         >
-          <span>Hello</span>
+          <span
+            ref={x => {
+              el = x;
+            }}
+            id="hello">Hello</span>
         </ClickAwayListener>,
         body,
       );
       const event = document.createEvent("MouseEvents");
       event.initEvent("mouseup", true, true);
+      expect(el.id).toBe("hello")
       el.dispatchEvent(event);
       expect(clicks).toBe(0);
     });

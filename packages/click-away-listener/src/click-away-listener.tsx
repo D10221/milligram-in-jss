@@ -1,6 +1,4 @@
-/**
- * source: https://github.com/mui-org/material-ui/blob/v1-beta/src/utils/ClickAwayListener.js
- */
+/** C:\dev\experiments\@me\milligram-in-jss\packages\click-away-listener*/
 
 import * as React from "react";
 import { findDOMNode } from "react-dom";
