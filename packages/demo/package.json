@@ -11,6 +11,7 @@
     "react-jss": "8.3.5",
     "react-popper": "^0.8.3",
     "react-scripts-ts": "2.14.0",
+    "react-transition-group": "^2.2.1",
     "webfontloader": "1.6.28"
   },
   "scripts": {
@@ -26,6 +27,7 @@
     "@types/react": "16.0.40",
     "@types/react-dom": "16.0.4",
     "@types/react-event-listener": "^0.4.5",
+    "@types/react-transition-group": "^2.0.7",
     "@types/webfontloader": "1.6.29",
     "cross-env": "^5.1.4",
     "typescript": "2.7.2"

@@ -10,6 +10,7 @@ import * as classnames from "classnames";
 /** typeface */
 import * as webFont from "webfontloader";
 import { Icon } from "@d10221/icon";
+import { Menu } from "./menu";
 // load font
 webFont.load({
   google: {
@@ -20,44 +21,13 @@ webFont.load({
 jss.setup(preset());
 // load resources
 const logo = require("./logo.svg");
-//
-import { Manager, Target, Popper, Arrow } from "react-popper";
-import { ClickAwayListener } from "@d10221/click-away-listener";
-
-const PopperExample = class extends Component<{
-  content: React.ReactElement<{}>;
-}> {
-  state = {
-    isOpen: false,
-  };
-  handleTargetClick = () => {
-    this.setState({ isOpen: true });
-  };
-  render() {
-    const { isOpen } = this.state;
-    return (
-      <Manager>
-        <Target>
-          <ClickAwayListener
-            onClickAway={() => this.setState({ isOpen: false })}
-          >
-            <button onClick={this.handleTargetClick}> OK </button>
-          </ClickAwayListener>
-        </Target>
-        {isOpen && (
-          <Popper placement="bottom-start" className="popper">
-            {this.props.content}
-            <Arrow className="popper__arrow" />
-          </Popper>
-        )}
-      </Manager>
-    );
-  }
-};
 /** */
 const App: ComponentType<{}> = withStyles(styles)(
   /** */
   class App extends Component<{ classes: Classes }> {
+    state = {
+      isMenuOpen: false
+    }
     render() {
       const { classes } = this.props;
       return (
@@ -66,11 +36,14 @@ const App: ComponentType<{}> = withStyles(styles)(
             <img src={logo} className={classes.logoSmall} alt="logo" />
             <h3 className={classes.toolbarTitle}>Milligram</h3>
             <div className={classes.spacer} />
-            <button
-              className={classnames("button button-clear", classes.iconButton)}
-            >
-              <Icon>menu</Icon>
-            </button>
+            <Menu
+              open={this.state.isMenuOpen}
+              onClose={e => { this.setState({ isMenuOpen: false }) }}
+              button={<button
+                className={classnames("button button-clear", classes.iconButton)}
+                onClick={e => { this.setState({ isMenuOpen: true }) }}><Icon>menu</Icon></button>}>
+              <div>ITEM</div>
+            </Menu>
           </div>
           <header className={classes.header}>
             <img src={logo} className={classes.logo} alt="logo" />
@@ -79,8 +52,7 @@ const App: ComponentType<{}> = withStyles(styles)(
           <div className={classnames(classes.container, "container")}>
             <p>
               To get started, edit <code>src/app.tsx</code> and save to reload.
-            </p>
-            <PopperExample content={<div>Hello</div>} />
+            </p>          
           </div>
         </div>
       );
