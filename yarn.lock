@@ -16,6 +16,13 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@d10221/click-away-listener@^0.1.0-1":
+  version "0.1.0-1"
+  resolved "https://registry.npmjs.org/@d10221/click-away-listener/-/click-away-listener-0.1.0-1.tgz#5ceafa16e662a850a9f3fff96206db8d9636cdcf"
+  dependencies:
+    dom-helpers "^3.3.1"
+    react-event-listener "^0.5.3"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -32,7 +39,7 @@
   version "9.4.7"
   resolved "https://registry.npmjs.org/@types/node/-/node-9.4.7.tgz#57d81cd98719df2c9de118f2d5f3b1120dcd7275"
 
-"@types/react-dom@16.0.4", "@types/react-dom@^16.0.4":
+"@types/react-dom@16.0.4":
   version "16.0.4"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.0.4.tgz#2e8fd45f5443780ed49bf2cdd9809e6091177a7d"
   dependencies:
@@ -51,7 +58,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@16.0.40", "@types/react@^16.0.40":
+"@types/react@*", "@types/react@16.0.40":
   version "16.0.40"
   resolved "https://registry.npmjs.org/@types/react/-/react-16.0.40.tgz#caabc2296886f40b67f6fc80f0f3464476461df9"
 

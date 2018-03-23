@@ -28,6 +28,7 @@ const App: ComponentType<{}> = withStyles(styles)(
     state = {
       isMenuOpen: false
     }
+    target: any;
     render() {
       const { classes } = this.props;
       return (
@@ -39,9 +40,14 @@ const App: ComponentType<{}> = withStyles(styles)(
             <Menu
               open={this.state.isMenuOpen}
               onClose={e => { this.setState({ isMenuOpen: false }) }}
-              button={<button
+              target={<button
+                ref={x => this.target = x}
                 className={classnames("button button-clear", classes.iconButton)}
-                onClick={e => { this.setState({ isMenuOpen: true }) }}><Icon>menu</Icon></button>}>
+                onClick={e => {
+                  console.log("set-state: isOpen:%s", true);
+                  this.setState({ isMenuOpen: true })
+                }}><Icon>menu</Icon></button>}
+            >
               <div>ITEM</div>
             </Menu>
           </div>
@@ -52,7 +58,7 @@ const App: ComponentType<{}> = withStyles(styles)(
           <div className={classnames(classes.container, "container")}>
             <p>
               To get started, edit <code>src/app.tsx</code> and save to reload.
-            </p>          
+            </p>
           </div>
         </div>
       );
