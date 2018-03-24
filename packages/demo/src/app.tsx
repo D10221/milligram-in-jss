@@ -48,7 +48,9 @@ const App: ComponentType<{}> = withStyles(styles)(
                   this.setState({ isMenuOpen: true })
                 }}><Icon>menu</Icon></button>}
             >
-              <div>ITEM</div>
+              <div>ITEM 1</div>
+              <div>ITEM 2</div>
+              <div>ITEM 3</div>
             </Menu>
           </div>
           <header className={classes.header}>
